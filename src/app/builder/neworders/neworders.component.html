@@ -1,0 +1,88 @@
+ <div class="page-content">
+            <!-- registration form -->
+            <div class="col-md-12 builder_dashboard">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="panel panel-default builder-dash_table">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong> New Order Booking </strong></h3>
+                                <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                            </div>
+
+                            <div class="panel-body">
+                                <form #form="ngForm" #myForm (ngSubmit)="submitOrder(form,myForm)" name="neworderform" role="form" required>
+                                    <!--div class="alert alert-danger">
+                <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+            </div-->
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <select class="form-control"  (change)="getuomBymaterial(newOrder.material)"  #material="ngModel" name="material" [(ngModel)]="newOrder.material">
+                                                    <option value="">Select Material </option>
+                                                    <option *ngFor="let material of materials" [ngValue]="material.id"> {{material.name}} </option>
+                                                </select>
+                                                 <span class="errInp" *ngIf="(material.errors || newOrder.material=='') && form.submitted">Please select material</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <select class="form-control" #uom="ngModel" name="uom" [(ngModel)]="newOrder.uom" required>
+                                                    <option [value]="0">Select UOM </option>
+                                                    <option *ngFor="let uom of uoms" [ngValue]="uom.id">{{uom.name}}</option>
+                                                </select>
+                                                <span class="errInp" *ngIf="(uom.errors || newOrder.uom==0) && form.submitted">Please select uom</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" placeholder="QUANTITY" tabindex="1" #quantity="ngModel" name="quantity" [(ngModel)]="newOrder.quantity" required>
+                                                <span class="errInp" *ngIf="quantity.errors && form.submitted">Please enter quantity</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control " placeholder="SIZE" tabindex="2" name="size" [(ngModel)]="newOrder.size">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <button class="btn btn-Check_status btn_new_order btn-sm"> SUBMIT ORDER</button>
+
+                                    <button class="btn btn-Check_status btn_new_order btn-sm"> CANCLE</button>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-9 no-padd-r">
+                    <div class="col-md-12 no-padd">
+                        <div class="panel panel-default builder-dash_table">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong>Current Orders </strong></h3>
+                                <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <e2edt-table [rows]="orders" [columns]="OrderColumns" *ngIf="orders" [search]="filterObject"></e2edt-table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- inside end -->
+        </div>

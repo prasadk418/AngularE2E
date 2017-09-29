@@ -1,0 +1,65 @@
+<div class="page-content" *ngIf="showComp">    
+    <div class="containe">
+        <div class="col-md-4 col-md-offset-4 text-center login">
+            <div class="row">
+                <div class="row">
+                    <div class="panel panel-default builder-registration">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong> SET PASSWORD </strong></h3>                            
+                        </div>
+                        <div class="panel-body">
+                            <form #form="ngForm" (ngSubmit)="submitForm(form)" name="setPwdForm">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="userName" required  #inpUserName="ngModel" class="form-control " tabindex="2" [(ngModel)]="userName" readonly="">                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="password" minlength="5" name="pwd" required  #inpPwd="ngModel" class="form-control " placeholder=" PASSWORD" tabindex="2" [(ngModel)]="pwd">
+                                            <span class="errInp" *ngIf="inpPwd.errors && form.submitted">Please enter password (Atleast 5 characters)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="password" name="cnfPwd" required  #inpCPwd="ngModel" class="form-control " placeholder="CONFIRM  PASSWORD" tabindex="2" [(ngModel)]="cnfPwd">
+                                            <span class="errInp" *ngIf="form.submitted && (pwd !== cnfPwd)">
+                                              <!-- <span *ngIf="inpCPwd.errors">Please enter password</span> -->
+                                              Confirm password doesn't match with your password
+                                              <!-- <span *ngIf="(pwd !== cnfPwd)">Confirm password doesn't match with your password</span>                                               -->
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select class="form-control" name="qns" [(ngModel)]="selectedQn">
+                                              <!-- (change)="qnChanged()" -->
+                                                <option *ngFor="let qn of questions" [ngValue]="qn" >
+                                                  {{qn.question}}
+                                                </option>
+                                            </select>
+                                            <span class="errInp" *ngIf="selectedQn.sqId===0 && form.submitted">Please select a question</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="ans" required [disabled]="selectedQn.sqId===0" #inpAns="ngModel" class="form-control " placeholder="ENTER ANSWER" [(ngModel)]="ans" tabindex="2">
+                                            <span class="errInp" *ngIf="form.submitted && inpAns.errors">Please select your answser</span>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button class="btn btn-Check_status btn-sm" type="submit">SET PASSWORD</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- inside end -->
+</div>

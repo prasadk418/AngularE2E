@@ -1,0 +1,114 @@
+<div class="page-content">
+            <!-- registration form -->
+            <div class="col-md-12 order_details_panel">
+               <div class="col-md-12">
+                  <div class="row">
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                           <h3 class="panel-title"><strong> Search Orders </strong></h3>
+                           <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                        </div>
+                        <div class="panel-body search_form_history">
+                           <form role="form">
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-3 col-md-3 ">
+                                    <div class="col-md-12">
+                                       <label>Material</label>
+                                       <div class="form-group">
+                                          <select class="form-control">
+                                            <option> ff</option>
+                                             <option>	Cement	</option>
+                                             <option>	Sand	</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3 form-group ">
+                                    <div class="col-md-12">
+                                       <label>Vendor Name</label>
+                                       <div class="form-group">
+                                          <select class="form-control">
+                                             <option>Select Vendor	 </option>
+                                             <option>	SS Constructions		</option>
+                                             <option>	 RR Constructions		</option>
+                                             <option>	 PS  Constructions		</option>
+                                             <option>	SS Constructions		</option>
+                                             <option>	 RR Constructions		</option>
+                                             <option>	 PS  Constructions		</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3 form-group">
+                                    <div class="col-md-12">
+                                       <label>Order Date from</label>
+                                       <input type="date" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="col-md-12">
+                                       <label>To</label>
+                                       <input type="Date" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="clearfix"></div>
+                                 <div class="col-md-3">
+                                    <div  class="col-md-12">
+                                       <label>Status</label>
+                                       <select class="form-control">
+                                          <option>	 Rejected		</option>
+                                          <option>	 Delivered		</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div  class="col-md-12">
+                                       <label>Invoice Number</label>
+                                       <input type="text" placeholder="Invoice Number" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-3 col-md-3 ">
+                                    <div class="col-md-12">
+                                       <label>Builder Name</label>
+                                       <div class="form-group">
+                                          <select class="form-control">
+                                             <option>Select Builder </option>
+                                             <option>	SS Constructions		</option>
+                                             <option>	 RR Constructions		</option>
+                                             <option>	 PS  Constructions		</option>
+                                             <option>	SS Constructions		</option>
+                                             <option>	 RR Constructions		</option>
+                                             <option>	 PS  Constructions		</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3 form-group">
+                                    <div class="col-md-12">
+                                       <label></label>
+                                       <button class="btn btn-Check_status btn_new_order btn-sm"> Search</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 no-padd" >
+                  <div class="col-md-12 no-padd">
+                     <div class="panel panel-default order_history-dash_table">
+                        <div class="panel-heading">
+                           <h3 class="panel-title"><strong>Orders </strong></h3>
+                           <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                        </div>
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                               <e2edt-table [rows]="rows" [columns]="OrderColumns" *ngIf="rows" [search]="filterObject"></e2edt-table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>

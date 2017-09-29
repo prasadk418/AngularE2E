@@ -1,0 +1,118 @@
+<div class="page-content">            
+  <div class="container builder_reg">
+    <div class="col-md-8 col-md-offset-2 text-center builder_registration">
+      <div class="row">
+        <div class="row">
+          <div class="panel panel-default builder-registration">
+            <div class="panel-heading">
+                <h3 class="panel-title"><strong> BUILDER REGISTRATION </strong></h3>                            
+            </div>
+            <div class="panel-body">
+                <form #form="ngForm" (ngSubmit)="submitForm(form)" name="regForm">                              
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">                              
+                              <input type="text" name="firmName" required  #inpFirm="ngModel" class="form-control" placeholder="FIRM NAME*" tabindex="1" [(ngModel)]="firmName">
+                              <span class="errInp" *ngIf="inpFirm.errors && form.submitted">Please enter your firm name</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="propName" required #inpProp="ngModel" class="form-control " placeholder="PROPRIETOR NAME*" tabindex="2" [(ngModel)]="propName">
+                                <span class="errInp" *ngIf="inpProp.errors && form.submitted">Please enter proprietor name</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="compRegNo" class="form-control" placeholder="COMPANY REGN. NO." tabindex="3" [(ngModel)]="compRegNo">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="gstNo" class="form-control " placeholder="GST NO." tabindex="4" [(ngModel)]="gstNo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="compPanNo" minlength="10" maxlength="10" required #inpCompPaN="ngModel" tabindex="5" class="form-control" placeholder="COMPANY PAN. NO.*"  [(ngModel)]="compPanNo">
+                                <span class="errInp" *ngIf="inpCompPaN.errors && form.submitted">Please enter valid pan number</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">                            
+                          <div class="form-group">
+                              <textarea class="form-control" name="address" required #inpAddress="ngModel" placeholder="ADDRESS*" tabindex="6" style="margin-top: 0px; margin-bottom: 0px; height: 48px;" [(ngModel)]="address"></textarea>
+                              <span class="errInp" *ngIf="inpAddress.errors && form.submitted">Please enter your address</span>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <textarea class="form-control" name="address" required #inpAddress="ngModel" placeholder="ADDRESS*" tabindex="4" style="margin-top: 0px; margin-bottom: 0px; height: 48px;" [(ngModel)]="address"></textarea>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="number" name="pinCode" minlength="6" maxlength="6"  required #inpPinCode="ngModel" class="form-control" placeholder="PIN CODE*" tabindex="7" [(ngModel)]="pinCode">
+                                <span class="errInp" *ngIf="inpPinCode.errors && form.submitted">Please enter valid pin code</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="phone" required #inpPhone="ngModel" class="form-control " placeholder="MOBILE NUMBER*"  pattern="\d{10}" tabindex="8" [(ngModel)]="phoneNum">
+                                <span class="errInp" *ngIf="inpPhone.errors && form.submitted">Please enter valid mobile number</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="landLineNum" class="form-control" placeholder="LANDLINE NUMBER" tabindex="9" [(ngModel)]="landLineNum">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="faxNum" class="form-control " placeholder="FAX NUMBER" tabindex="10" [(ngModel)]="faxNum">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="email" name="busiEmail" required #inpBEmail="ngModel" class="form-control" placeholder="BUSINESS E-MAIL*" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" tabindex="11" [(ngModel)]="busiEmail">
+                                <span class="errInp" *ngIf="inpBEmail.errors && form.submitted">Please enter valid email</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input type="email" name="secEmail" class="form-control " placeholder="SECONDARY E-MAIL" tabindex="12" [(ngModel)]="secEmail">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group text-left">
+                            <input type="checkbox" name="termsAndCond" [(ngModel)]="termsAndCond"><a class="black" href="javascript:void(0)"> Terms&amp;Conditions</a>
+                            <span class="errInp" *ngIf="!termsAndCond && form.submitted">Please accept terms & conditions</span>
+                        </div>
+                    </div>
+                    <br>                                
+                    <button type="submit" class="btn btn-Check_status btn-sm">REGISTER</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
+</div>

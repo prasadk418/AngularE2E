@@ -1,0 +1,33 @@
+<div class="total_section">        
+    <header class="top_header">
+        <div class="container-fluid">
+            <div class="col-md-6 logo col-xs-12">
+                <a [routerLink]="['/prelogin/welcome']"><span class="logo-title"> REAL ESTATE PROJECT </span></a>
+            </div>
+            <form #form="ngForm" (ngSubmit)="submitForm(form)">
+                <div class="col-md-6 nav-bar text-right col-xs-12">
+                    <div class="col-md-5 no-padd col-xs-12">
+                        <input name="email" #inp #emailInp="ngModel" (ngModelChange)="(!emailInp.errors && emailInp.value)?inp.style.borderColor='#ccc':''"  type="text" [(ngModel)]="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="login_fields form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-5 no-padd-r col-xs-12">
+                        <input minlength="5" required name="pwd" [(ngModel)]="pwd" type="password" class="login_fields form-control" placeholder="Password">
+                        <p class="margin_0"><a href="javascript:void(0)" (click)="(emailInp.errors || !emailInp.value)?inp.style.borderColor='red':forgotpwd()" class="forgot_password">Forgot password?</a></p>
+                    </div>
+
+                    <div class="col-md-2 col-xs-12 text-left">
+                        <!-- <a href="javascript:void(0)" (click)="onSignIn()" class="btn btn-sign btn-sm">Sign in</a> -->
+                        <button type="submit" [disabled]="!form.valid" class="btn btn-sign btn-sm">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>    
+    <router-outlet></router-outlet>
+
+    <div class="col-md-12 footer ">        
+        <div class="container-fluid    ">
+            <p class="white text-center">&copy; 2017 All Rights Reserved.</p>
+        </div>
+    </div>
+
+</div>

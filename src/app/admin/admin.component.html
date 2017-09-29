@@ -1,0 +1,33 @@
+<div class="total_section">
+        <!-- nav bar  start-->
+        <header class="top_header">
+            <div class="container-fluid">
+                <div class="col-md-6 logo col-xs-12">
+                    <a routerLink="dashboard"><span class="logo-title"> REAL ESTATE PROJECT </span></a>
+                </div>
+                <div class="col-md-6 nav-bar text-right col-xs-12">
+
+                    <div class="dropdown">
+                        <button class="btn btn-sign btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Welcome Admin
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a routerLink="registeredusers">Registered Users</a></li>
+                            <li><a routerLink="orderdetails">Order details</a></li>
+                            <li><a routerLink="orderhistory">Orders history</a></li>
+                            <li><a href="index.html">Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- nav bar end -->
+        <router-outlet></router-outlet>
+
+        <div class="col-md-12 footer ">
+            <div class="container-fluid	 ">
+                <p class="white text-center">&copy; 2017 All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </div>

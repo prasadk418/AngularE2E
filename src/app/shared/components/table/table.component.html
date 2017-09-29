@@ -1,0 +1,23 @@
+<table class="table table-bordered table-hover" style="color:black">
+    <thead>
+        <tr>
+          <th *ngFor="let column of columns" (click)="(column.sort)?sort(column.name):''" [class]="column.sortIcon?getSortIconClass():''">
+              {{column.title}}              
+          </th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows | searchBy:search | limitTo:limitTo | sortBy : {col:column, order:direction}">
+            <td *ngFor="let column of columns">
+                <span *ngIf="column.cellElement">
+                    <button *ngIf="column.cellElement === 'button'" class="btn btn-ts" (click)="column.clickHandler.call(column.this,row)">{{column.innerText}}</button>
+                    <input *ngIf="column.cellElement === 'radio'" type="radio" name="td_radio" (click)="column.clickHandler.call(column.this,row)"/>
+                    <a href="javascript:void(0)" *ngIf="column.cellElement === 'href'" (click)="column.clickHandler.call(column.this,row)">{{row[column.name]}}</a>
+                    <i *ngIf="column.cellElement === 'icon'" [class]="column.cellClass" (click)="column.clickHandler.call(column.this,row)"></i>
+                </span>
+                <span *ngIf="!column.cellElement">{{row[column.name]}}</span>
+            </td>            
+        </tr>
+    </tbody>
+    
+</table>

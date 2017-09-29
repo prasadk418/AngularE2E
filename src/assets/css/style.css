@@ -1,0 +1,385 @@
+
+body{
+	
+	background-image: url(../images/bg-1.jpg);
+	 background-repeat:no-repeat;
+    background-size:cover;
+	background-attachment: fixed;
+    background-position: center; 
+	color:#fff !important;
+}
+a:hover{
+    text-decoration: none !important;
+}
+.plain_bg {
+	
+	background-image: url(../images/bg_inner.jpg) !important;
+	 background-repeat:no-repeat;
+     background-size:cover;
+	 background-attachment: fixed;
+    background-position: center; 
+	color:#000 !important;
+}
+.admin_bg {
+	
+	background-image: url() !important;
+	background-color:#ccc !important;
+	 background-repeat:no-repeat;
+     background-size:cover;
+	 background-attachment: fixed;
+    background-position: center; 
+	color:#000 !important;
+}
+.logo-title{	
+    position: relative;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 25px;
+    line-height: 1.7;
+    letter-spacing: .02em;
+    font-weight: 400;
+	color:#fff;
+	list-style:none;
+    box-sizing: border-box;
+}
+.top_header{
+	padding:15px 0px 5px 0px !important;
+	height:70px;
+}
+.btn_viewmore{
+	
+	position:absolute;
+	bottom:30px;
+	right:15px;
+}
+.margin_0{
+	margin:0px !important;
+}
+.panel-default{
+	
+	background:transparent;
+}
+.form-control{
+	border-radius:0px !important;
+	height:30px !important;
+}
+.edit{
+	cursor:pointer;
+}
+
+.panel-default{
+	
+	border-radius:0px !important;
+}
+.panel-default>.panel-heading{
+	
+	color: #fff !important;
+    background-color: #009688 !important;
+	padding:0px !important;
+
+}
+.popins_font{
+	
+	font-family: 'Poppins', sans-serif;
+}
+header
+{
+	background-color:#009688 !important;
+	padding:7px;
+}
+p{
+	
+	text-align:justify;
+}
+.plain_bg .service_types{
+	
+	border:1px dotted #fff;
+	padding:20px 10px;
+	background-color:#009688;
+	box-shadow: 5px 5px 10px #888888;
+	cursor:pointer;
+	
+	
+}
+.plain_bg .service_types:hover{
+	box-shadow: 0px 0px 10px #888888;
+	
+}
+.btn-order{
+	color:#fff;
+	font-weight:bold;
+	margin:0px;
+}
+
+.plain_bg .btn-reg{
+	
+	background-color:transparent !important;
+	border:3px solid #fff !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	
+}
+.plain_bg .btn-reg:hover{
+	
+	
+	border:3px dotted #fff !important;
+	
+}
+.service_types{
+	
+	border:2px dotted #fff;
+	padding:20px 10px;
+	padding-bottom:30px;
+	
+	
+}
+.padd-30{
+	padding:30px 5px 5px 10px !important;
+}
+.padd-40{
+	padding:30px !important;
+	box-sizing:border-box;
+}
+.btn-reg:hover{
+	
+	border:3px solid #009688 !important;
+	
+}
+.btn-reg{
+	
+	background-color:transparent !important;
+	border:3px solid #fff !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	
+}
+option{
+	background-color:#fff !important;
+	color:#000 !important;
+}
+.forgot_password{
+	color:#fff !important;
+}
+
+.btn-sign{
+	
+	background-color:transparent !important;
+	border:2px solid #fff !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	
+}
+.btn-Check_status{
+	
+	background-color:#009688 !important;
+	border:2px solid #009688 !important;
+	color:#fff !important;
+	border-radius:0px !important;
+	font-weight:bold !important;
+	margin-left:5px;
+	
+}
+
+.padd-sm{
+  padding-left:8px !important;
+  padding-right:8px !important;
+}
+.padd-xs{
+  padding-left:3px !important;
+  padding-right:3px !important;
+}
+.no-padd-l{
+  padding-left:0px !important;
+}
+.no-padd-r{
+  padding-right:0px !important;
+}
+.no-padd{
+  padding-left:0px !important;
+  padding-right:0px !important;
+}
+.main_text{
+		font-weight:900px !important;
+		margin-bottom:20px;
+}
+.footer {
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+  text-align: center;
+  
+}
+.mdl-layout__content{
+	padding-bottom:100px !important;
+}
+
+.login{
+	padding-top:100px;
+}
+.black{
+	color:#000 !important;
+}
+.white{
+	color:#fff !important;
+}
+.table-bordered>thead>tr>th ,td{
+border: 1px solid #101010 !important;
+}
+.padd-10{
+	padding-top:20px;
+}
+table{
+	margin-bottom:0px !important;
+}
+.btn-active{
+	background-color:#000 !important;
+}
+.search{
+	background-color:rgba(0, 0, 0, 0.62);
+	padding:10px;
+	padding-left:0px !important;
+	padding-right:0px !important;
+	
+}
+.search label{
+	color:#fff;
+}
+
+.white_bg{
+	
+	background-image:url() !important;
+	color:#000 !important;
+}
+.admin_orders_tabel{
+		margin-top:30px;
+	
+}
+.admin_orders_tabel tr td input:first-child{
+	margin-left:20px;
+	height:17px;
+	width:17px;
+}
+.admin_search{
+	
+	font-size:18px;
+	font-weight:100 !important;
+}
+.search_btn{
+	background-color:#009688 !important;
+	color:#fff !important;
+	cursor:pointer;
+}
+.check_status_field{
+		background-color:transparent;
+		color:#fff !important;
+	    padding: 6px 12px;
+		height:33px;
+}
+.panel-title{
+	
+	padding:10px;
+} 
+.builder_dashboard{
+	padding:20px;
+	margin-top:35px;
+	
+}
+.or{
+		margin:0px !important;
+		font-size:10px;
+
+}
+
+.builder-dash_table{
+	height:404px !important;
+	overflow:hidden;
+}
+.order_history-dash_table{
+	height:350px !important;
+	
+}
+
+.builder_dashboard .form-control{
+	margin-bottom:20px;
+	height:35px !important;
+}
+.btn_new_order{
+	
+	display:block !important;
+	width:100% !important;
+	margin-bottom:10px !important;
+	padding:8px !important;
+}
+.dropdown-menu{
+	right:0px !important;
+	left:inherit !important;
+	min-width:138px !important;
+}
+.builder_registration{
+	margin-top:30px;
+}
+textarea.form-control {
+	height:auto !important;
+}
+
+.order_details_panel{
+	margin-top:15px !important;
+}
+.search_form .form-control{
+	margin-bottom:0px !important;
+	height:30px !important;
+}
+.admin-dash_table{
+	
+	height:535px !important;
+}
+.admin-dash_table_1{
+	
+	height:440px !important;
+}
+.Pricing{
+	margin-top:20px;
+}
+.search_form_history .form-group{
+	margin-bottom:2px !important;
+}
+
+
+
+/* responsive styles */
+@media only screen and (max-width: 500px) {
+    .no-padd-r {
+        padding:0px !important;
+    }
+	.login_fields{
+		margin-bottom:5px;
+	}
+	.top_header{
+		height:100px !important;
+		padding:10px 0px 5px 0px !important;
+	}
+	.admin-dash_table{
+		height:auto !important;
+	}
+	.or{
+		margin-top:0px !important;
+	}
+	.top_header{
+		height:auto !important;
+	}
+	.builder-dash_table{
+		height:auto !important;
+	}
+	.builder_reg{
+		
+		padding:15px !important;
+	}
+	.admin-dash_table_1{
+	
+	height:auto !important;
+}
+	
+	
+}

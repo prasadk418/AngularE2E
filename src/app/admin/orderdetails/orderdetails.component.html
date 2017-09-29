@@ -1,0 +1,134 @@
+<div class="page-content">
+            <!-- registration form -->
+            <div class="col-md-12 order_details_panel">
+               <div class="col-md-3">
+                  <div class="row">
+                     <div class="panel panel-default admin-dash_table">
+                        <div class="panel-heading">
+                           <h3 class="panel-title"><strong> Search Orders </strong></h3>
+                           <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                        </div>
+                        <div class="panel-body search_form">
+                           <form role="form">
+                              <!--div class="alert alert-danger">
+                                 <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
+                                 </div-->
+                              <div class="row">
+                                 <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                       <select class="form-control" name="material" [(ngModel)]="filterObject.material">
+                                          <option value=""> Select Material </option>
+                                         <option *ngFor="let material of materials" [ngValue]="material.name"> {{material.name}} </option>
+                                          </select>
+                                    </div>
+                                    <div class="col-md-12 no-padd-l">
+                                       <button (click)="filterOrders()" class="btn btn-Check_status btn_new_order btn-sm"> Get Orders</button>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 form-group ">
+                                    <hr>
+                                    <div class="col-md-12">
+                                       <label>Builder Name</label>
+                                       <div class="form-group">
+                                          <select class="form-control" name="builder" [(ngModel)]="filterObject.firm_name">
+                                             <option value="">Select Name</option>
+                                             <option *ngFor="let builder of builders" [ngValue]="builder"> {{builder}} </option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div  class="col-md-12">
+                                       <label>Status</label>
+                                       <select class="form-control" name="status" [(ngModel)]="filterObject.orderStatus">
+                                          <option>Select </option>
+                                          <option *ngFor="let status of statuslist" [ngValue]="status"> {{status}} </option>
+                                          </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 form-group">
+                                    <div class="col-md-12">
+                                       <label>Orders from</label>
+                                       <input type="date" class="form-control">
+                                    </div>
+                                    <div class="col-md-12">
+                                       <label>Orders till</label>
+                                       <input type="Date" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                              <button class="btn btn-Check_status btn_new_order btn-sm"(click)="filterOrders()" > Search</button> 
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-9 no-padd-r" >
+                  <div class="col-md-12 no-padd">
+                     <div class="panel panel-default admin-dash_table">
+                        <div class="panel-heading">
+                           <h3 class="panel-title"><strong>Orders </strong></h3>
+                           <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                        </div>
+                        <div class="panel-body">
+                           <div class="table-responsive">
+                              <e2edt-table [rows]="orders" [columns]="OrderColumns" *ngIf="orders" [search]="filterObject"></e2edt-table>
+                           </div>
+                           <div class="Pricing">
+                              <form role="form">
+                                 <div class="col-md-12 form-group no-padd">
+                                    <div class="col-md-3">
+                                       <label>Price</label><input type="text" class="form-control" placeholder="Price"> 
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Amount</label><input type="text" disabled class="form-control" placeholder="Amount">
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Vendor No</label>
+                                       <select class="form-control">
+                                          <option>Select No </option>
+                                          <option>	123456		</option>
+                                          <option>	789102		</option>
+                                       </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Vendor Name</label>
+                                       <input type="text" disabled placeholder="Vendor Name" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 form-group no-padd">
+                                    <div class="col-md-3">
+                                       <label>Order Status</label>
+                                       <select class="form-control" >
+                                          <option>Onhold </option>
+                                          <option>Rejected </option>
+                                          <option>Delivered </option>
+                                       </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Delivery Date</label>
+                                       <input disabled type="date" class="form-control">
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Confirmation Date</label>
+                                       <input disabled type="date" class="form-control">
+                                    </div>
+                                    <div class="col-md-3">
+                                       <label>Delivery Qty</label>
+                                       <input disabled type="text" class="form-control" placeholder="Delivery Qty">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-12 form-group no-padd">
+                                    <div class="col-md-9">
+                                       <textarea class="form-control" placeholder="Comments"></textarea>
+                                    </div>
+                                    <div class="col-md-3"><br>
+                                       <button class="btn btn-Check_status btn_new_order btn-sm"> Save</button>
+                                    </div>
+                                 </div>
+                           </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>

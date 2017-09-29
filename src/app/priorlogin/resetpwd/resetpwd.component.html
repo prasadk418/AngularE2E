@@ -1,0 +1,49 @@
+<div class="page-content">            
+    <div class="containe">
+        <div class="col-md-4 col-md-offset-4 text-center login">
+            <div class="row">
+                <div class="row">
+                    <div class="panel panel-default builder-registration">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong> RESET PASSWORD </strong></h3>                            
+                        </div>
+                        <div class="panel-body">
+                            <form #form="ngForm" (ngSubmit)="submitForm(form)" name="resetPwdForm">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="sq" required  #inpSq="ngModel" class="form-control" tabindex="2" [(ngModel)]="sq" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="ans" required #inpAns="ngModel" class="form-control" placeholder="ENTER ANSWER" tabindex="2" [(ngModel)]="ans">
+                                            <span class="errInp" *ngIf="inpAns.errors && form.submitted">Please enter answer</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="password" name="pwd" minlength="5" required #inpPwd="ngModel" class="form-control" placeholder="NEW PASSWORD" tabindex="2" [(ngModel)]="pwd">
+                                            <span class="errInp" *ngIf="inpPwd.errors && form.submitted">Please enter password (Atleast 5 characters)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="password" name="cnfPwd" required #inpCPwd="ngModel" class="form-control " placeholder="CONFIRM  PASSWORD" tabindex="2" [(ngModel)]="cnfPwd">
+                                            <span class="errInp" *ngIf="form.submitted && (pwd !== cnfPwd)">                                              
+                                              Confirm password doesn't match with your password                                            
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-Check_status btn-sm">RESET PASSWORD</button>
+                                </div>
+                            </form>                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,33 @@
+  <div class="page-content">
+            <!-- registration form -->
+            <div class="container builder_dashboard">
+               <div class="col-md-12">
+                  <div class="row">
+                     <div class="panel panel-default builder-dash_table">
+                        <div class="panel-heading">
+                           <h3 class="panel-title"><strong> Registered Users </strong></h3>
+                           <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                        </div>
+                        <div class="panel-body table-responsive">
+                          <e2edt-table [rows]="rows" [columns]="userColumns" *ngIf="rows" [search]="filterObject"></e2edt-table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- inside end -->
+         </div>
+
+          <button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#statusModel" >Open Modal</button>
+                    <div class="modal fade" id="statusModel"  tabindex="-1" role="dialog" aria-labelledby="addModelLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                            <button type="button" id="statusclose" class="close" data-dismiss="modal" aria-hidden="true">X</button> 
+                                         <div class="modal-header">
+                                            <h5 style="color:black;text-align:center" class="modal-title text-cap" id="myLargeModalLabel"> Change The Registration Status</h5>
+                                        </div>
+                                        <input type="button" class="btn btn-success" (click)="changestatus(constants.STATUS.Approved)" value="Approve"/>
+                                        <input type="button" class="btn btn-danger pull-right" (click)="changestatus(constants.STATUS.Rejected)" value="Reject"/>
+                            </div>
+                        </div>
+                    </div>

@@ -1,0 +1,80 @@
+<div class="page-content">    
+    <div class="col-md-12 order_details_panel">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong> Search Orders </strong></h3>                        
+                    </div>
+                    <div class="panel-body search_form_history">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-3 form-group ">
+                                    <div class="col-md-12">
+                                        <label>Material</label>
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option> Cement </option>
+                                                <option> Steel </option>
+                                                <option> Binding Wire </option>
+                                                <option> Metal Stone </option>
+                                                <option> Sand </option>
+                                                <option> Bricks </option>
+                                                <option> Wood </option>
+                                                <option> Electrical Materials </option>
+                                                <option> Plumbing Materials </option>
+                                                <option> Painting Materials </option>
+                                                <option> Fitting &amp; Fixtures </option>
+                                                <option> Flooring Materials </option>
+                                                <option> Miscellaneous </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <div class="col-md-12">
+                                        <label>Orders from</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="col-md-12">
+                                        <label>Orders till</label>
+                                        <input type="Date" class="form-control">
+                                    </div>
+                                </div>                                
+                                <div class="col-md-3">
+                                    <div class="col-md-12">
+                                        <label>Order Number</label>
+                                        <input type="text" placeholder="Order Number" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <div class="col-md-12">
+                                        <label></label>
+                                        <button class="btn btn-Check_status btn_new_order btn-sm"> Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 no-padd">
+            <div class="col-md-12 no-padd">
+                <div class="panel panel-default order_history-dash_table">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Orders </strong></h3>
+                        <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                                <e2edt-table [rows]="orders" [columns]="OrderColumns" *ngIf="orders" [search]="filterObject"></e2edt-table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

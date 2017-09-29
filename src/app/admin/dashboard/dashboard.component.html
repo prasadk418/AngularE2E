@@ -1,0 +1,48 @@
+<div class="page-content">
+            <!-- registration form -->
+            <div class="container builder_dashboard">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="panel panel-default admin-dash_table_1">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong> Registered Users </strong></h3>
+                                <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                            </div>
+
+                            <div class="panel-body padd-40 table-responsive">
+                                <e2edt-table [rows]="users" [columns]="userColumns" *ngIf="users" [limitTo]="7" [search]="filterObject"></e2edt-table>
+                                <a routerLink="../registeredusers" class="btn btn-Check_status  btn_viewmore btn-sm">
+                                    More...
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 no-padd-r">
+                    <div class="col-md-12 no-padd">
+                        <div class="panel panel-default admin-dash_table_1">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong> Orders</strong></h3>
+                                <!--div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div-->
+                            </div>
+
+                            <div class="panel-body padd-40 table-responsive">
+                                 <e2edt-table [rows]="orders" [columns]="OrderColumns" *ngIf="orders" [limitTo]="7" [search]="filterObject"></e2edt-table>
+
+                                <a routerLink="../orderdetails" class="btn btn-Check_status  btn_viewmore btn-sm">
+                                    More...
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- inside end -->
+        </div>
